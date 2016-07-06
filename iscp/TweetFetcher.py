@@ -14,7 +14,7 @@ class TweetFetcher:
         self.search_terms = [search_terms]
         self.data = []
         dir = os.path.dirname(__file__)
-        self.tweet_list = os.path.join(dir, '../tweetlist.json')
+        self.tweet_list = os.path.join(dir, '../iscp/tweetlist.json')
 
     def set_search_terms(self, *search_terms):
         self.search_terms = [search_terms]

@@ -2,10 +2,11 @@
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
-import random
-import TweetController
 
-tweetController = TweetController.TweetController()
+from iscp.TweetController import TweetController
+
+tweetController = TweetController()
+
 
 class StartView(APIView):
     def get(self, request, *args ,**kw):

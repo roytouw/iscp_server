@@ -8,9 +8,8 @@ import threading
 
 import time
 
-import DataAnalyzer
-import SavedTweetLoader
-import TweetFetcher
+from iscp.DataAnalyzer import DataAnalyzer
+from iscp import SavedTweetLoader, TweetFetcher
 import math
 
 
@@ -19,7 +18,7 @@ class TweetController:
     def __init__(self):
         self.tweetFetcher = TweetFetcher.TweetFetcher()
         self.savedTweetLoader = SavedTweetLoader.SavedTweetLoader()
-        self.dataAnalyzer = DataAnalyzer.DataAnalyzer()
+        self.dataAnalyzer = DataAnalyzer()
         self.fetch_thread = threading.Thread(target=self.tweetFetcher.search)
         self.update_data = threading.Thread(target=self.update_data)
         self.last_results = []

@@ -3,7 +3,7 @@ import os
 class DataAnalyzer:
     #list_location = "twitter_sentiment_list.csv"
     dir = os.path.dirname(__file__)
-    list_location = os.path.join(dir, '../twitter_sentiment_list.csv')
+    list_location = os.path.join(dir, '../iscp/twitter_sentiment_list.csv')
 
     def __init__(self):
         self.sentiment_list = self.read_sentiment_list()

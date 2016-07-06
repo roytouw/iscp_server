@@ -10,7 +10,7 @@ class SavedTweetLoader:
 
     def load_tweets(self):
         dir = os.path.dirname(__file__)
-        filename = os.path.join(dir, '../tweetlist.json')
+        filename = os.path.join(dir, '../iscp/tweetlist.json')
         return set(codecs.open(filename, "r", "utf-8").read().split())
 
     def get_tweets(self):
