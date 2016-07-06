@@ -18,6 +18,6 @@ from django.conf.urls import patterns, url
 from iscp import views
 
 urlpatterns = patterns('',
-    url(r'test', views.TestView.as_view(), name='test')
-)
-
+                       url(r'start', views.StartView.as_view(), name='start'),
+                       url(r'fetch', views.FetchView.as_view(), name='fetch')
+                       )
